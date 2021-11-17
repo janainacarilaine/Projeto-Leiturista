@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "LeituristaAtualizado\Api.csproj", "{1BB4B0D3-B9CF-471E-8D29-778E0E3AE0DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Negocio\Business.csproj", "{AC7367BC-8D22-42F1-BB0E-6D06B37D77C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Dados\Data.csproj", "{86005E03-E111-432B-9552-8F1EC79B3B36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BB4B0D3-B9CF-471E-8D29-778E0E3AE0DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BB4B0D3-B9CF-471E-8D29-778E0E3AE0DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BB4B0D3-B9CF-471E-8D29-778E0E3AE0DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BB4B0D3-B9CF-471E-8D29-778E0E3AE0DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC7367BC-8D22-42F1-BB0E-6D06B37D77C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC7367BC-8D22-42F1-BB0E-6D06B37D77C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC7367BC-8D22-42F1-BB0E-6D06B37D77C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC7367BC-8D22-42F1-BB0E-6D06B37D77C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86005E03-E111-432B-9552-8F1EC79B3B36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86005E03-E111-432B-9552-8F1EC79B3B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86005E03-E111-432B-9552-8F1EC79B3B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86005E03-E111-432B-9552-8F1EC79B3B36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38817930-D8B7-407D-8620-F998D283030F}
+	EndGlobalSection
+EndGlobal
