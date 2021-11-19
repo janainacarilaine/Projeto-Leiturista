@@ -17,7 +17,7 @@ namespace Business.Interfaces.Servicos
 
         Task<IEnumerable<LeituraViewModel>> BuscarPorMesAno(int mes, int ano);
 
-        Task Adicionar(LeituraCadastroViewModel leituraViewModel);
+        Task<LeituraCadastroViewModel> Adicionar(LeituraCadastroViewModel leituraViewModel);
 
         Task Atualizar(LeituraAtualizacaoViewModel leituraViewModel);
 

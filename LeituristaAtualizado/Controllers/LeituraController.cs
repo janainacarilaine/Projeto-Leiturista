@@ -62,8 +62,8 @@ namespace Api.Controllers
         {
             if (!ModelState.IsValid) return RespostaCustomizada();
 
-            await _leituraServico.Adicionar(leituraViewModel);
-            return RespostaCustomizada(leituraViewModel);
+            var leitura = await _leituraServico.Adicionar(leituraViewModel);
+            return RespostaCustomizada(leitura);
         }
 
         [Authorize(Roles = "Leiturista")]

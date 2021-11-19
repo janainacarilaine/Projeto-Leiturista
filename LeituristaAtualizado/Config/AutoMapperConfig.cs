@@ -29,7 +29,7 @@ namespace Api.Config
                .ForMember(l => l.LeituristaViewModel, l => l.MapFrom(l => l.Leiturista))
                .ForMember(l => l.OcorrenciaViewModel, l => l.MapFrom(l => l.Ocorrencia));
 
-            CreateMap<LeituraCadastroViewModel, Leitura>();
+            CreateMap<LeituraCadastroViewModel, Leitura>().ReverseMap();
             CreateMap<LeituraAtualizacaoViewModel, Leitura>();
         }
     }

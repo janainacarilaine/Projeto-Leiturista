@@ -59,7 +59,7 @@ namespace Business.Servicos
             return _mapper.Map<IEnumerable<LeituraViewModel>>(await _leituraRepositorio.BuscarTodos());
         }
 
-        public async Task Adicionar(LeituraCadastroViewModel leituraViewModel)
+        public async Task<LeituraCadastroViewModel> Adicionar(LeituraCadastroViewModel leituraViewModel)
         {
             var leitura = _mapper.Map<Leitura>(leituraViewModel);
 
@@ -75,20 +75,20 @@ namespace Business.Servicos
             if (!leiturista.Ativo)
                 _notificador.AdicionarNotificacao(new Notificacao("Leiturista inativo, não é possível realizar a leitura!"));
 
-
             var ocorrencia = await _ocorrenciaRepositorio.BuscarPorId(leitura.OcorrenciaId);
 
             if (ocorrencia == null) _notificador.AdicionarNotificacao(new Notificacao("Ocorrência não encontrada!"));
-
 
             if (!ocorrencia.PermiteLeitura)
             {
                 leitura.LeituraAtual = null;
                 _notificador.AdicionarAlerta(new Alerta("A Ocorrência informada não permite leitura portanto leitura atual salva como nula!"));
                 await _leituraRepositorio.Adicionar(leitura);
+                return _mapper.Map<LeituraCadastroViewModel>(leitura);
             }
 
             await _leituraRepositorio.Adicionar(leitura);
+            return _mapper.Map<LeituraCadastroViewModel>(leitura);
         }
 
         public async Task Atualizar(LeituraAtualizacaoViewModel leituraViewModel)
